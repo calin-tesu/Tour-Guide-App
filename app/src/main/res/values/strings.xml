@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">City Tour Guide</string>
+
+    <string name="category_events">Events</string>
+    <string name="category_museums">Culture</string>
+    <string name="category_pubs">Fun</string>
+    <string name="category_restaurants">Food</string>
+</resources>
