@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="300dp"
     android:orientation="vertical"
-    android:padding="16dp"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:padding="@dimen/margin_big">
 
     <TextView
         android:id="@+id/attraction_name"
+        style="@android:style/TextAppearance.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        style="@android:style/TextAppearance.Large"
-        tools:text="Muzeul Bruckenthal"/>
+        android:layout_marginBottom="@dimen/margin_small"
+        tools:text="Muzeul Bruckenthal" />
 
     <ImageView
         android:id="@+id/attraction_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        tools:src="@drawable/brukenthal"/>
-
+        tools:src="@drawable/brukenthal" />
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.android.citytourguide;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,18 +22,18 @@ public class EventsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tourist_attraction_list, container, false);
 
         //Create a list of touristic attractions
         final ArrayList<TouristAttraction> touristAttractions = new ArrayList<>();
-        touristAttractions.add(new TouristAttraction("Sibiu International Theatre Festival", R.drawable.faust));
-        touristAttractions.add(new TouristAttraction("Sibiu Jazz Festival", R.drawable.jazz));
-        touristAttractions.add(new TouristAttraction("Medieval Festival \"Transylvanian Fortresses\"", R.drawable.medieval));
-        touristAttractions.add(new TouristAttraction("ArtMania Rock Festival", R.drawable.artmania));
-        touristAttractions.add(new TouristAttraction("Cibinfest", R.drawable.cibinfest));
-        touristAttractions.add(new TouristAttraction("Red Bull roMANIACS", R.drawable.red_bull_romaniacs));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.theatre_festival), R.drawable.faust));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.jazz_festival), R.drawable.jazz));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.medieval_festival), R.drawable.medieval));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.rock_festival), R.drawable.artmania));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.cibinfest), R.drawable.cibinfest));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.romaniacs), R.drawable.red_bull_romaniacs));
 
         /*
          * Create an {@link TouristAttractionAdapter} whose data source is a list of {@link TouristAttraction}s.
@@ -43,7 +44,7 @@ public class EventsFragment extends Fragment {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // tourist_attraction_list.xml layout file.
-        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
 
         return rootView;

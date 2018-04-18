@@ -5,4 +5,24 @@
     <string name="category_museums">Culture</string>
     <string name="category_pubs">Fun</string>
     <string name="category_restaurants">Food</string>
+    <string name="la_sepp">La Sepp</string>
+    <string name="ileana_wine_cellar">Ileana Wine Cellar</string>
+    <string name="pension_casa_frieda">Pension Casa Frieda</string>
+    <string name="balkan_bistro">Balkan Bistro</string>
+    <string name="ramada_atrium">Ramada Atrium</string>
+    <string name="theatre_festival">Sibiu International Theatre Festival</string>
+    <string name="jazz_festival">Sibiu Jazz Festival</string>
+    <string name="medieval_festival">Medieval Festival \"Transylvanian Fortresses\"</string>
+    <string name="rock_festival">ArtMania Rock Festival</string>
+    <string name="cibinfest">Cibinfest</string>
+    <string name="romaniacs">Red Bull roMANIACS</string>
+    <string name="brukenthal">Brukenthal Museum</string>
+    <string name="astra">The \'Astra\' Museum of Traditional Folk Civilisation</string>
+    <string name="saint_ursula">Saint Ursula Roman Catholic Church</string>
+    <string name="biertan">Biertan fortified church</string>
+    <string name="the_corner">The Corner Factory</string>
+    <string name="cotton_pub">Cotton Pub</string>
+    <string name="geea">Geea Caffe</string>
+    <string name="liquid_club">Liquid The Club</string>
+    <string name="oldies_pub">Oldies Pub</string>
 </resources>

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
+class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
 
     /**
      * Constructor
@@ -46,7 +46,7 @@ public class TouristAttractionAdapter extends ArrayAdapter<TouristAttraction> {
         TouristAttraction currentAttraction = getItem(position);
 
         //Find the text view in the list_item_xml with the Id attraction_name
-        TextView tvAttractionName = (TextView) listItemView.findViewById(R.id.attraction_name);
+        TextView tvAttractionName = listItemView.findViewById(R.id.attraction_name);
         //Set the touristic attraction name
         tvAttractionName.setText(currentAttraction.getAttractionName());
 

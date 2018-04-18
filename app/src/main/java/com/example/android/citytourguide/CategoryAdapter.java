@@ -9,12 +9,12 @@ import android.support.v4.app.FragmentPagerAdapter;
  * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
  * each list item based on a data source which is a list of {@link TouristAttraction} objects.
  */
-public class CategoryAdapter extends FragmentPagerAdapter {
+class CategoryAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 4;
+    private final int PAGE_COUNT = 4;
 
     /** Context of the app */
-    private Context mContext;
+    private final Context mContext;
 
     /**
      * Create a new {@link CategoryAdapter} object.
@@ -30,27 +30,29 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new EventsFragment();
-        } else if (position == 1) {
-            return new MuseumsFragment();
-        } else if (position == 2) {
-            return new PubsFragment();
-        } else {
-            return new RestaurantsFragment();
+        switch (position) {
+            case 0:
+                return new EventsFragment();
+            case 1:
+                return new MuseumsFragment();
+            case 2:
+                return new PubsFragment();
+            default:
+                return new RestaurantsFragment();
         }
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0) {
-            return mContext.getString(R.string.category_events);
-        } else if (position == 1) {
-            return mContext.getString(R.string.category_museums);
-        } else if (position == 2) {
-            return mContext.getString(R.string.category_pubs);
-        } else {
-            return mContext.getString(R.string.category_restaurants);
+        switch (position) {
+            case 0:
+                return mContext.getString(R.string.category_events);
+            case 1:
+                return mContext.getString(R.string.category_museums);
+            case 2:
+                return mContext.getString(R.string.category_pubs);
+            default:
+                return mContext.getString(R.string.category_restaurants);
         }
     }
 

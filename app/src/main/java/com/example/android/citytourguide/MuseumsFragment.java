@@ -2,6 +2,7 @@ package com.example.android.citytourguide;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,16 +22,16 @@ public class MuseumsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tourist_attraction_list, container, false);
 
         //Create a list of touristic attractions
         final ArrayList<TouristAttraction> touristAttractions = new ArrayList<>();
-        touristAttractions.add(new TouristAttraction("Brukenthal Museum", R.drawable.brukenthal));
-        touristAttractions.add(new TouristAttraction("The 'Astra' Museum of Traditional Folk Civilisation", R.drawable.mcpt));
-        touristAttractions.add(new TouristAttraction("Saint Ursula Roman Catholic Church", R.drawable.ursuline));
-        touristAttractions.add(new TouristAttraction("Biertan fortified church", R.drawable.biertan));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.brukenthal), R.drawable.brukenthal));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.astra), R.drawable.mcpt));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.saint_ursula), R.drawable.ursuline));
+        touristAttractions.add(new TouristAttraction(getString(com.example.android.citytourguide.R.string.biertan), R.drawable.biertan));
 
         /*
          * Create an {@link TouristAttractionAdapter} whose data source is a list of {@link TouristAttraction}s.
@@ -41,7 +42,7 @@ public class MuseumsFragment extends Fragment {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // tourist_attraction_list.xml layout file.
-        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
 
         return rootView;

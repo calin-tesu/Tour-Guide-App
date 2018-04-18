@@ -3,13 +3,13 @@ package com.example.android.citytourguide;
 /**
  * {@Link TouristAttraction} represents a touristic attraction that contains a name and an image of it
  */
-public class TouristAttraction {
+class TouristAttraction {
 
     //Attraction name
-    private String mAttractionName;
+    private final String mAttractionName;
 
     //Image resource id for the attraction
-    private int mAttractionImageResourceId;
+    private final int mAttractionImageResourceId;
 
     /**
      * Create a new TouristAttraction object
